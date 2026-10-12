@@ -1,0 +1,76 @@
+{
+  "test_metrics": {
+    "Logistic Regression": {
+      "accuracy": 0.7381121362668559,
+      "precision": 0.504302925989673,
+      "recall": 0.7834224598930482,
+      "f1": 0.6136125654450262,
+      "roc_auc": 0.841501976284585,
+      "confusion_matrix": [
+        [
+          747,
+          288
+        ],
+        [
+          81,
+          293
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.751596877217885,
+      "precision": 0.5210526315789473,
+      "recall": 0.7941176470588235,
+      "f1": 0.6292372881355932,
+      "roc_auc": 0.8430868790203828,
+      "confusion_matrix": [
+        [
+          762,
+          273
+        ],
+        [
+          77,
+          297
+        ]
+      ]
+    },
+    "Gradient Boosting": {
+      "accuracy": 0.8019872249822569,
+      "precision": 0.6599326599326599,
+      "recall": 0.5240641711229946,
+      "f1": 0.5842026825633383,
+      "roc_auc": 0.8431979642977084,
+      "confusion_matrix": [
+        [
+          934,
+          101
+        ],
+        [
+          178,
+          196
+        ]
+      ]
+    }
+  },
+  "error_analysis": {
+    "total_test_samples": 1409,
+    "total_churners": 374,
+    "true_positives_count": 297,
+    "false_negatives_count": 77,
+    "false_positives_count": 273,
+    "true_negatives_count": 762,
+    "fn_avg_tenure": 33.48051948051948,
+    "fn_avg_monthly_charges": 68.15259740259741,
+    "fn_contract_distribution": {
+      "Month-to-month": 0.45454545454545453,
+      "One year": 0.42857142857142855,
+      "Two year": 0.11688311688311688
+    },
+    "tp_avg_tenure": 12.05050505050505,
+    "tp_avg_monthly_charges": 73.96346801346802,
+    "tp_contract_distribution": {
+      "Month-to-month": 0.98989898989899,
+      "One year": 0.010101010101010102
+    }
+  }
+}

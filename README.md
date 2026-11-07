@@ -1,11 +1,17 @@
 # Telco Customer Churn Prediction & ML Pipeline
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Test Suite](https://img.shields.io/badge/Tests-10%20Passed-success.svg)](tests/)
+[![ROC-AUC](https://img.shields.io/badge/Holdout%20ROC--AUC-0.843-blue.svg)](models/metrics.json)
+[![Recall](https://img.shields.io/badge/Holdout%20Recall-79.4%25-green.svg)](models/metrics.json)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4+-F7931E.svg)](https://scikit-learn.org/)
 
 An end-to-end, leak-free supervised machine learning pipeline and interactive Streamlit application developed on the **IBM Telco Customer Churn dataset** (7,043 customer accounts).
+
+> 💡 **Production MLOps Evolution**:  
+> This repository represents the foundational classical supervised modeling pipeline (zero data leakage, stratified cross-validation, and in-depth error analysis). For its continuous delivery evolution featuring a point-in-time Feast feature store, MLflow model registry, DVC pipeline automation, and automated KS/PSI distribution drift monitoring, explore **[mlforge-mlops](https://github.com/Farid-Masood-Khan/mlforge-mlops)**.
 
 This repository operationalizes the core concepts of the **DeepLearning.AI / Stanford Online Machine Learning Specialization** (Supervised Learning, Regularization, Decision Trees, Random Forests, and Gradient Boosting) into a reproducible, production-style codebase.
 
@@ -129,7 +135,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Run the Complete ML Pipeline
+### 2. Run the Automated Test Suite
+```bash
+pytest tests/ -v
+```
+
+### 3. Run the Complete ML Pipeline
 ```bash
 # 1. Preprocessing and leak-free split verification
 python src/preprocess.py
